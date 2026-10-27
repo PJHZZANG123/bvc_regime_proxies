@@ -1,0 +1,86 @@
+{
+ "settings": {
+  "source": "data/features/features_{4h,1d}.parquet (공통 표본)",
+  "signed_log": "transform.signed_log (전체 표본 MAD, 이후 표준화)"
+ },
+ "4h": {
+  "n_bars": 10855,
+  "with_cvd": {
+   "pearson": {
+    "flow_bvc": 0.7731,
+    "flow_clv": 0.5351,
+    "flow_res": -0.1513,
+    "r": 0.7146
+   },
+   "spearman": {
+    "flow_bvc": 0.7201,
+    "flow_clv": 0.5297,
+    "flow_res": -0.0843,
+    "r": 0.7311
+   },
+   "pearson_signed_log": {
+    "flow_bvc": 0.7501,
+    "flow_clv": 0.5503,
+    "flow_res": -0.0924,
+    "r": 0.7496
+   }
+  },
+  "with_r": {
+   "pearson": {
+    "flow_bvc": 0.8642,
+    "flow_clv": 0.7426,
+    "flow_res": -0.0073
+   },
+   "spearman": {
+    "flow_bvc": 0.9751,
+    "flow_clv": 0.7896,
+    "flow_res": 0.0313
+   },
+   "pearson_signed_log": {
+    "flow_bvc": 0.9552,
+    "flow_clv": 0.794,
+    "flow_res": 0.0341
+   }
+  }
+ },
+ "1d": {
+  "n_bars": 1775,
+  "with_cvd": {
+   "pearson": {
+    "flow_bvc": 0.7607,
+    "flow_clv": 0.53,
+    "flow_res": -0.1507,
+    "r": 0.7305
+   },
+   "spearman": {
+    "flow_bvc": 0.7344,
+    "flow_clv": 0.5495,
+    "flow_res": -0.0315,
+    "r": 0.7455
+   },
+   "pearson_signed_log": {
+    "flow_bvc": 0.7544,
+    "flow_clv": 0.5592,
+    "flow_res": -0.0601,
+    "r": 0.7597
+   }
+  },
+  "with_r": {
+   "pearson": {
+    "flow_bvc": 0.9162,
+    "flow_clv": 0.7661,
+    "flow_res": 0.0018
+   },
+   "spearman": {
+    "flow_bvc": 0.9787,
+    "flow_clv": 0.8138,
+    "flow_res": 0.1395
+   },
+   "pearson_signed_log": {
+    "flow_bvc": 0.9686,
+    "flow_clv": 0.8091,
+    "flow_res": 0.1036
+   }
+  }
+ }
+}

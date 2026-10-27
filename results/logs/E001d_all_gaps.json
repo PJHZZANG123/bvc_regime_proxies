@@ -1,0 +1,79 @@
+{
+  "total_rows": 2810915799,
+  "n_gaps": 6,
+  "total_missing": 611488,
+  "gaps": [
+    {
+      "missing": 22785,
+      "id_before": 308181841,
+      "id_after": 308204627,
+      "t_before": 1612847308467,
+      "t_after": 1612848935345,
+      "cross_month": false,
+      "from_month": null,
+      "month": "2021-02",
+      "utc_before": "2021-02-09 05:08:28.467",
+      "utc_after": "2021-02-09 05:35:35.345"
+    },
+    {
+      "missing": 8,
+      "id_before": 308680643,
+      "id_after": 308680652,
+      "t_before": 1612863575327,
+      "t_after": 1612863575972,
+      "cross_month": false,
+      "from_month": null,
+      "month": "2021-02",
+      "utc_before": "2021-02-09 09:39:35.327",
+      "utc_after": "2021-02-09 09:39:35.972"
+    },
+    {
+      "missing": 13,
+      "id_before": 338732069,
+      "id_after": 338732083,
+      "t_before": 1614148134746,
+      "t_after": 1614148135219,
+      "cross_month": false,
+      "from_month": null,
+      "month": "2021-02",
+      "utc_before": "2021-02-24 06:28:54.746",
+      "utc_after": "2021-02-24 06:28:55.219"
+    },
+    {
+      "missing": 557026,
+      "id_before": 504067347,
+      "id_after": 504624374,
+      "t_before": 1621430133994,
+      "t_after": 1621431610709,
+      "cross_month": false,
+      "from_month": null,
+      "month": "2021-05",
+      "utc_before": "2021-05-19 13:15:33.994",
+      "utc_after": "2021-05-19 13:40:10.709"
+    },
+    {
+      "missing": 31645,
+      "id_before": 1439655679,
+      "id_after": 1439687325,
+      "t_before": 1662484476603,
+      "t_after": 1662484857627,
+      "cross_month": false,
+      "from_month": null,
+      "month": "2022-09",
+      "utc_before": "2022-09-06 17:14:36.603",
+      "utc_after": "2022-09-06 17:20:57.627"
+    },
+    {
+      "missing": 11,
+      "id_before": 1439827479,
+      "id_after": 1439827491,
+      "t_before": 1662487089820,
+      "t_after": 1662487090719,
+      "cross_month": false,
+      "from_month": null,
+      "month": "2022-09",
+      "utc_before": "2022-09-06 17:58:09.820",
+      "utc_after": "2022-09-06 17:58:10.719"
+    }
+  ]
+}

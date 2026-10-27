@@ -1,0 +1,40 @@
+{
+  "4h": {
+    "open": 0,
+    "high": 0,
+    "low": 0,
+    "close": 0,
+    "거래량(BTC)": {
+      "exact": 7948,
+      "over_1bp": 113,
+      "over_1pct": 7,
+      "max_rel": 0.2480215305312552
+    },
+    "거래량(USDT)": {
+      "exact": 7947,
+      "over_1bp": 114,
+      "over_1pct": 7,
+      "max_rel": 0.2465739209951025
+    },
+    "cvd_sign_mismatch": 0
+  },
+  "1d": {
+    "open": 0,
+    "high": 0,
+    "low": 0,
+    "close": 0,
+    "거래량(BTC)": {
+      "exact": 1085,
+      "over_1bp": 19,
+      "over_1pct": 4,
+      "max_rel": 0.032912619972632465
+    },
+    "거래량(USDT)": {
+      "exact": 1085,
+      "over_1bp": 19,
+      "over_1pct": 4,
+      "max_rel": 0.03321549556241602
+    },
+    "cvd_sign_mismatch": 0
+  }
+}

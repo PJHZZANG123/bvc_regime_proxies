@@ -1,0 +1,83 @@
+{
+ "settings": {
+  "cut_index": {
+   "4h": 101,
+   "1d": 51
+  },
+  "r": "ln(C_t / C_{t-1})",
+  "V": "sum(p*q) USDT",
+  "cvd": "sum(eps*p*q) USDT"
+ },
+ "BTC_4h": {
+  "n_bars": 10855,
+  "start_utc": "2021-01-17 20:00:00+00:00",
+  "end_utc": "2025-12-31 20:00:00+00:00",
+  "r_mean_pct": 0.008281138843558937,
+  "r_sd_pct": 1.250774947162949,
+  "r_skew": -0.15183932321798843,
+  "r_excess_kurt": 8.662657223235025,
+  "V_median_eok_usdt": 19.7103076960333,
+  "rows_per_bar_median_man": 19.8156,
+  "cvd_over_V_mean": -0.005120170711214761,
+  "cvd_over_V_sd": 0.046666952076479376,
+  "abs_cvd_over_V_median": 0.029755219077789795,
+  "cvd_positive_pct": 45.45370796867803,
+  "sign_agree_with_r_pct": 77.918010133579,
+  "r_zero_bars": 2,
+  "flagged_bars": 5
+ },
+ "BTC_1d": {
+  "n_bars": 1775,
+  "start_utc": "2021-02-21 00:00:00+00:00",
+  "end_utc": "2025-12-31 00:00:00+00:00",
+  "r_mean_pct": 0.02529570817917827,
+  "r_sd_pct": 2.973014917676683,
+  "r_skew": -0.23042879250991016,
+  "r_excess_kurt": 3.54719483346216,
+  "V_median_eok_usdt": 141.94390269659002,
+  "rows_per_bar_median_man": 135.6006,
+  "cvd_over_V_mean": -0.005000631935347549,
+  "cvd_over_V_sd": 0.02454956000125791,
+  "abs_cvd_over_V_median": 0.016357946058481003,
+  "cvd_positive_pct": 40.67605633802817,
+  "sign_agree_with_r_pct": 78.19718309859155,
+  "r_zero_bars": 0,
+  "flagged_bars": 3
+ },
+ "ETH_4h": {
+  "n_bars": 10855,
+  "start_utc": "2021-01-17 20:00:00+00:00",
+  "end_utc": "2025-12-31 20:00:00+00:00",
+  "r_mean_pct": 0.00819915164531902,
+  "r_sd_pct": 1.6428219907290957,
+  "r_skew": -0.31692806503438925,
+  "r_excess_kurt": 6.588967379214708,
+  "V_median_eok_usdt": 10.965922806394602,
+  "rows_per_bar_median_man": 18.227,
+  "cvd_over_V_mean": -0.008424355431067818,
+  "cvd_over_V_sd": 0.04316287375280016,
+  "abs_cvd_over_V_median": 0.02881527700348859,
+  "cvd_positive_pct": 41.29894058037771,
+  "sign_agree_with_r_pct": 76.43482266236758,
+  "r_zero_bars": 7,
+  "flagged_bars": 5
+ },
+ "ETH_1d": {
+  "n_bars": 1775,
+  "start_utc": "2021-02-21 00:00:00+00:00",
+  "end_utc": "2025-12-31 00:00:00+00:00",
+  "r_mean_pct": 0.02474356881416055,
+  "r_sd_pct": 4.027051614679328,
+  "r_skew": -0.2519133294253057,
+  "r_excess_kurt": 5.279403429069523,
+  "V_median_eok_usdt": 72.4653610850026,
+  "rows_per_bar_median_man": 116.0191,
+  "cvd_over_V_mean": -0.008565798653155042,
+  "cvd_over_V_sd": 0.023331336687453408,
+  "abs_cvd_over_V_median": 0.015956593982303563,
+  "cvd_positive_pct": 34.59154929577465,
+  "sign_agree_with_r_pct": 74.59154929577466,
+  "r_zero_bars": 0,
+  "flagged_bars": 3
+ }
+}

@@ -1,0 +1,33 @@
+E020b 재확인 (2026-10-23) — 온라인 부록 표 A1 「기준을 통과한 K」 열 검증용.
+설정: select_k.py 와 동일(M1=[r, CVD 흐름], 4h 10,855봉, K=2~6, 시드 0~9 최고 우도, n_iter 500, tol 1e-4, 완전 공분산, 최소비중 0.05·지속확률 0.90).
+변환: zscore / winsorize4(±4sd 뒤 표준화) / signed_log / rank_normal. 스크립트: 세션 스크래치패드 recheck_a1.py(appendix_tables.winsorize4, transform.* 사용).
+
+zscore       K=2  BIC   43,653.9  seed 1  최소비중 0.294  최소지속 0.620  탈락
+zscore       K=3  BIC   42,162.4  seed 0  최소비중 0.093  최소지속 0.469  탈락
+zscore       K=4  BIC   41,161.6  seed 2  최소비중 0.073  최소지속 0.459  탈락
+zscore       K=5  BIC   40,473.4  seed 0  최소비중 0.073  최소지속 0.436  탈락
+zscore       K=6  BIC   40,077.6  seed 5  최소비중 0.067  최소지속 0.459  탈락
+==> zscore: 통과한 K = 없음   (195s)
+
+winsorize4   K=2  BIC   44,905.8  seed 2  최소비중 0.355  최소지속 0.673  탈락
+winsorize4   K=3  BIC   43,580.7  seed 8  최소비중 0.171  최소지속 0.626  탈락
+winsorize4   K=4  BIC   42,804.7  seed 3  최소비중 0.146  최소지속 0.509  탈락
+winsorize4   K=5  BIC   42,274.9  seed 1  최소비중 0.115  최소지속 0.511  탈락
+winsorize4   K=6  BIC   41,914.1  seed 7  최소비중 0.076  최소지속 0.524  탈락
+==> winsorize4: 통과한 K = 없음   (224s)
+
+signed_log   K=2  BIC   51,185.3  seed 3  최소비중 0.448  최소지속 0.969  통과
+signed_log   K=3  BIC   50,509.1  seed 9  최소비중 0.284  최소지속 0.962  통과
+signed_log   K=4  BIC   50,345.2  seed 4  최소비중 0.066  최소지속 0.254  탈락
+signed_log   K=5  BIC   49,604.7  seed 5  최소비중 0.102  최소지속 0.376  탈락
+signed_log   K=6  BIC   49,405.2  seed 4  최소비중 0.087  최소지속 0.375  탈락
+==> signed_log: 통과한 K = [2, 3]   (263s)
+
+rank_normal  K=2  BIC   50,882.4  seed 8  최소비중 0.427  최소지속 0.957  통과
+rank_normal  K=3  BIC   50,103.1  seed 5  최소비중 0.295  최소지속 0.950  통과
+rank_normal  K=4  BIC   49,872.0  seed 8  최소비중 0.092  최소지속 0.263  탈락
+rank_normal  K=5  BIC   49,497.1  seed 6  최소비중 0.070  최소지속 0.281  탈락
+rank_normal  K=6  BIC   49,267.2  seed 3  최소비중 0.040  최소지속 0.304  탈락
+==> rank_normal: 통과한 K = [2, 3]   (286s)
+
+

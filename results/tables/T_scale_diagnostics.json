@@ -1,0 +1,80 @@
+{
+ "4h": {
+  "sigma_roll_pct": {
+   "p05": 0.5273556134188874,
+   "median": 1.0399229484189345,
+   "p95": 2.1197303984930085,
+   "yearly_median": {
+    "2021": 1.587723671315538,
+    "2022": 1.1810349210926936,
+    "2023": 0.7840702110136748,
+    "2024": 1.0265632374077338,
+    "2025": 0.7948412688877133
+   }
+  },
+  "r": {
+   "sd_over_normal_mad": 1.7950614913609388,
+   "sd_change_drop_top1_pct": -12.835681889239392,
+   "mad_change_drop_top1_pct": -1.2748734873108902
+  },
+  "flow_cvd": {
+   "sd_over_normal_mad": 1.8293310309617,
+   "sd_change_drop_top1_pct": -15.115987085196936,
+   "mad_change_drop_top1_pct": -1.6350919187362756
+  },
+  "flow_bvc": {
+   "sd_over_normal_mad": 2.304742646518491,
+   "sd_change_drop_top1_pct": -16.706690113327827,
+   "mad_change_drop_top1_pct": -1.3368023110319038
+  },
+  "flow_clv": {
+   "sd_over_normal_mad": 1.547530239481859,
+   "sd_change_drop_top1_pct": -10.491977657355623,
+   "mad_change_drop_top1_pct": -1.6151801920453401
+  },
+  "flow_res": {
+   "sd_over_normal_mad": 1.7191570863224859,
+   "sd_change_drop_top1_pct": -17.68138663999733,
+   "mad_change_drop_top1_pct": -1.6641511799189157
+  }
+ },
+ "1d": {
+  "sigma_roll_pct": {
+   "p05": 1.6093143636150387,
+   "median": 2.7752776739799803,
+   "p95": 4.713521467242654,
+   "yearly_median": {
+    "2021": 3.838196336189025,
+    "2022": 3.4103560952312635,
+    "2023": 2.0910231077530983,
+    "2024": 2.6709382946544276,
+    "2025": 2.1559570409603577
+   }
+  },
+  "r": {
+   "sd_over_normal_mad": 1.4618062076083085,
+   "sd_change_drop_top1_pct": -8.632164745788273,
+   "mad_change_drop_top1_pct": -1.3818761241085609
+  },
+  "flow_cvd": {
+   "sd_over_normal_mad": 1.5007443619716445,
+   "sd_change_drop_top1_pct": -8.876865203721385,
+   "mad_change_drop_top1_pct": -2.023851598466042
+  },
+  "flow_bvc": {
+   "sd_over_normal_mad": 1.4372408329665716,
+   "sd_change_drop_top1_pct": -10.349883172135888,
+   "mad_change_drop_top1_pct": -1.0416090659616017
+  },
+  "flow_clv": {
+   "sd_over_normal_mad": 1.0888477327233894,
+   "sd_change_drop_top1_pct": -6.295529063324601,
+   "mad_change_drop_top1_pct": -2.078879502098696
+  },
+  "flow_res": {
+   "sd_over_normal_mad": 1.4696998416308087,
+   "sd_change_drop_top1_pct": -12.327953627930889,
+   "mad_change_drop_top1_pct": -1.6264608112748768
+  }
+ }
+}

@@ -1,0 +1,25 @@
+﻿E010~E013 변수 생성
+
+--- 4h ---
+  σ 윈도우 50  회귀 윈도우 W=100  ν=0.25
+  최초 유효 인덱스: {'r': 1, 'flow_cvd': 0, 'flow_bvc': 51, 'flow_clv': 0, 'flow_res': 101}
+  공통 시작 101  ->  10,855봉 남음 (99.08%)
+  구간 2021-01-17 20:00 ~ 2025-12-31 20:00 UTC
+  H==L 봉 0개   절단 후 결측플래그 봉 5개
+  직교성 corr(잔차, r) = -0.007334
+  corr(흐름, r):   cvd +0.7146  bvc +0.8642  clv +0.7426  res -0.0073
+  corr(흐름, CVD): bvc +0.7731  clv +0.5351  res -0.1513
+  저장 C:\bvc_research\data\features\features_4h.parquet  (1,350 KB)
+
+--- 1d ---
+  σ 윈도우 50  회귀 윈도우 W=50  ν=0.25
+  최초 유효 인덱스: {'r': 1, 'flow_cvd': 0, 'flow_bvc': 51, 'flow_clv': 0, 'flow_res': 51}
+  공통 시작 51  ->  1,775봉 남음 (97.21%)
+  구간 2021-02-21 00:00 ~ 2025-12-31 00:00 UTC
+  H==L 봉 0개   절단 후 결측플래그 봉 3개
+  직교성 corr(잔차, r) = +0.001759
+  corr(흐름, r):   cvd +0.7305  bvc +0.9162  clv +0.7661  res +0.0018
+  corr(흐름, CVD): bvc +0.7607  clv +0.5300  res -0.1507
+  저장 C:\bvc_research\data\features\features_1d.parquet  (222 KB)
+
+리포트: C:\bvc_research\results\logs\E010_features_report.json

@@ -1,0 +1,55 @@
+{
+  "4h": {
+    "n_bars": 10956,
+    "n_empty": 0,
+    "n_flagged": 5
+  },
+  "1d": {
+    "n_bars": 1826,
+    "n_empty": 0,
+    "n_flagged": 4
+  },
+  "audit": {
+    "total_rows": 2595791763,
+    "n_gaps": 6,
+    "missing_ids": 712900,
+    "gaps": [
+      {
+        "missing": 9087,
+        "t_before": 1612847308104,
+        "t_after": 1612848933936,
+        "month": "2021-02"
+      },
+      {
+        "missing": 6,
+        "t_before": 1612863575332,
+        "t_after": 1612863575829,
+        "month": "2021-02"
+      },
+      {
+        "missing": 1,
+        "t_before": 1614148134325,
+        "t_after": 1614148135092,
+        "month": "2021-02"
+      },
+      {
+        "missing": 609653,
+        "t_before": 1621430133926,
+        "t_after": 1621431610729,
+        "month": "2021-05"
+      },
+      {
+        "missing": 94135,
+        "t_before": 1662484174244,
+        "t_after": 1662484857617,
+        "month": "2022-09"
+      },
+      {
+        "missing": 18,
+        "t_before": 1662487090034,
+        "t_after": 1662487090729,
+        "month": "2022-09"
+      }
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "4h": {
+    "interval": "4h",
+    "n_bars": 10855,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "transform": "signed_log",
+    "min_share_rule": 0.05,
+    "min_persist_rule": 0.9,
+    "covariance_type": "full",
+    "candidates": [
+      {
+        "K": 2,
+        "bic": 51185.3493614856,
+        "aic": 51090.54840741554,
+        "loglik": -25532.27420370777,
+        "seed": 3,
+        "converged": true,
+        "n_iter_used": 79,
+        "min_share": 0.44799631506218335,
+        "min_persist": 0.9690370971287648,
+        "shares": [
+          0.448,
+          0.552
+        ],
+        "persist": [
+          0.969,
+          0.9729
+        ],
+        "pass_share": true,
+        "pass_persist": true,
+        "survives": true
+      },
+      {
+        "K": 3,
+        "bic": 50509.139136481834,
+        "aic": 50341.414371588646,
+        "loglik": -25147.707185794323,
+        "seed": 9,
+        "converged": true,
+        "n_iter_used": 84,
+        "min_share": 0.2836480884385076,
+        "min_persist": 0.9620145461185038,
+        "shares": [
+          0.2836,
+          0.3145,
+          0.4018
+        ],
+        "persist": [
+          0.962,
+          0.9682,
+          0.9949
+        ],
+        "pass_share": true,
+        "pass_persist": true,
+        "survives": true
+      },
+      {
+        "K": 4,
+        "bic": 50345.15276324584,
+        "aic": 50089.919425364904,
+        "loglik": -25009.959712682452,
+        "seed": 4,
+        "converged": true,
+        "n_iter_used": 438,
+        "min_share": 0.06632888070013819,
+        "min_persist": 0.25425738600311115,
+        "shares": [
+          0.0663,
+          0.1834,
+          0.1853,
+          0.565
+        ],
+        "persist": [
+          0.2543,
+          0.4164,
+          0.4233,
+          0.8018
+        ],
+        "pass_share": true,
+        "pass_persist": false,
+        "survives": false
+      },
+      {
+        "K": 5,
+        "bic": 49604.69472940854,
+        "aic": 49247.368056375235,
+        "loglik": -24574.684028187618,
+        "seed": 5,
+        "converged": true,
+        "n_iter_used": 282,
+        "min_share": 0.10244127130354676,
+        "min_persist": 0.3755078604845595,
+        "shares": [
+          0.1024,
+          0.1081,
+          0.1986,
+          0.2838,
+          0.307
+        ],
+        "persist": [
+          0.3755,
+          0.41,
+          0.9478,
+          0.9501,
+          0.986
+        ],
+        "pass_share": true,
+        "pass_persist": false,
+        "survives": false
+      },
+      {
+        "K": 6,
+        "bic": 49405.22297858542,
+        "aic": 48931.218208235114,
+        "loglik": -24400.609104117557,
+        "seed": 4,
+        "converged": true,
+        "n_iter_used": 483,
+        "min_share": 0.08650391524643021,
+        "min_persist": 0.37479114054931595,
+        "shares": [
+          0.0865,
+          0.0891,
+          0.0982,
+          0.1043,
+          0.2766,
+          0.3453
+        ],
+        "persist": [
+          0.3748,
+          0.3795,
+          0.3846,
+          0.396,
+          0.9471,
+          0.9919
+        ],
+        "pass_share": true,
+        "pass_persist": false,
+        "survives": false
+      }
+    ],
+    "k_star": 3,
+    "model_file": "M1_4h_K3_seed9.npz"
+  },
+  "1d": {
+    "interval": "1d",
+    "n_bars": 1775,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "transform": "signed_log",
+    "min_share_rule": 0.05,
+    "min_persist_rule": 0.9,
+    "covariance_type": "full",
+    "candidates": [
+      {
+        "K": 2,
+        "bic": 8305.452223525466,
+        "aic": 8234.191999400642,
+        "loglik": -4104.095999700321,
+        "seed": 4,
+        "converged": true,
+        "n_iter_used": 44,
+        "min_share": 0.316056338028169,
+        "min_persist": 0.9628246339012774,
+        "shares": [
+          0.3161,
+          0.6839
+        ],
+        "persist": [
+          0.9628,
+          0.9828
+        ],
+        "pass_share": true,
+        "pass_persist": true,
+        "survives": true
+      },
+      {
+        "K": 3,
+        "bic": 8113.877387235259,
+        "aic": 7987.801606091341,
+        "loglik": -3970.9008030456703,
+        "seed": 7,
+        "converged": true,
+        "n_iter_used": 92,
+        "min_share": 0.2276056338028169,
+        "min_persist": 0.8036893176092809,
+        "shares": [
+          0.2276,
+          0.338,
+          0.4344
+        ],
+        "persist": [
+          0.8037,
+          0.878,
+          0.9729
+        ],
+        "pass_share": true,
+        "pass_persist": false,
+        "survives": false
+      },
+      {
+        "K": 4,
+        "bic": 8085.775619658203,
+        "aic": 7893.92117009137,
+        "loglik": -3911.960585045685,
+        "seed": 0,
+        "converged": true,
+        "n_iter_used": 98,
+        "min_share": 0.17859154929577464,
+        "min_persist": 0.7429838390172847,
+        "shares": [
+          0.1786,
+          0.1887,
+          0.1961,
+          0.4366
+        ],
+        "persist": [
+          0.743,
+          0.7864,
+          0.9768,
+          0.9777
+        ],
+        "pass_share": true,
+        "pass_persist": false,
+        "survives": false
+      },
+      {
+        "K": 5,
+        "bic": 8112.055949066276,
+        "aic": 7843.45971967271,
+        "loglik": -3872.729859836355,
+        "seed": 7,
+        "converged": true,
+        "n_iter_used": 281,
+        "min_share": 0.08112676056338028,
+        "min_persist": 0.3395476355052668,
+        "shares": [
+          0.0811,
+          0.1217,
+          0.1713,
+          0.2203,
+          0.4056
+        ],
+        "persist": [
+          0.3395,
+          0.5534,
+          0.9477,
+          0.9632,
+          0.9929
+        ],
+        "pass_share": true,
+        "pass_persist": false,
+        "survives": false
+      },
+      {
+        "K": 6,
+        "bic": 8130.686370680182,
+        "aic": 7774.385250056063,
+        "loglik": -3822.1926250280317,
+        "seed": 6,
+        "converged": true,
+        "n_iter_used": 419,
+        "min_share": 0.01971830985915493,
+        "min_persist": 6.851114790606144e-16,
+        "shares": [
+          0.0197,
+          0.1228,
+          0.1279,
+          0.1837,
+          0.1887,
+          0.3572
+        ],
+        "persist": [
+          0.0,
+          0.3034,
+          0.4445,
+          0.9648,
+          0.9719,
+          0.9786
+        ],
+        "pass_share": false,
+        "pass_persist": false,
+        "survives": false
+      }
+    ],
+    "k_star": 2,
+    "model_file": "M1_1d_K2_seed4.npz"
+  }
+}

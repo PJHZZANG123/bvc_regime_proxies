@@ -1,0 +1,53 @@
+# BVC 국면 복원력 연구 — 고정 환경
+# Python 3.12.14 (uv venv --python 3.12 .venv)
+# 재현: uv venv --python 3.12 .venv ; uv pip install -r requirements.txt
+#
+# hmmlearn은 버전마다 EM 수렴 결과가 달라진다. 연구 종료까지 0.3.3 고정.
+# numpy/scipy/scikit-learn도 하위 수치 연산이 바뀌면 수렴 경로가 달라지므로 함께 고정.
+# 확정일: 2026-09-14
+
+# --- 핵심 (수렴 결과에 직접 영향) ---
+hmmlearn==0.3.3
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+
+# --- 데이터 처리 ---
+pandas==3.0.5
+pyarrow==25.0.1
+tzdata==2026.4
+
+# --- 회귀 / 로짓 ---
+statsmodels==0.15.0
+patsy==1.0.3
+formulaic==1.2.2
+
+# --- 그림 ---
+matplotlib==3.11.2
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.65.0
+kiwisolver==1.5.1
+pillow==12.3.0
+pyparsing==3.3.2
+
+# --- 수집 / 유틸 ---
+requests==2.34.2
+tqdm==4.70.1
+certifi==2026.7.22
+charset-normalizer==3.5.1
+idna==3.19
+urllib3==2.7.0
+
+# --- 간접 의존 ---
+cloudpickle==3.1.2
+colorama==0.4.6
+interface-meta==2.0.1
+joblib==1.6.0
+narwhals==2.26.0
+packaging==26.3
+python-dateutil==2.9.0.post0
+six==1.17.0
+threadpoolctl==3.6.0
+typing-extensions==4.16.0
+wrapt==2.4.1
