@@ -11,7 +11,7 @@ Regime Reproduction or Period Separation? Evaluating Order-Flow Proxies against 
 | 경로 | 내용 |
 |---|---|
 | `appendix/online_appendix.pdf` | 온라인 부록 A–H: 관측값 변환 비교, 강건성 전체 결과, 블록 길이별 구간, 추정·검정 설정, 연도별 일치도, 종가 위치 프록시(CLV) 결과, 자료 구축의 세부, 국면 수 선택 |
-| `src/` | 수집, 봉 생성, 변수 생성, 은닉마르코프모형 추정, 분할 일치도 평가, 검정, 강건성 분석 코드 (주석은 한국어) |
+| `src/` | 수집, 봉 생성, 변수 생성, 은닉마르코프모형 추정, 국면 일치도 평가, 검정, 강건성 분석 코드 (주석은 한국어) |
 | `data/bars/` | 4시간봉·일봉·1시간봉·달러봉의 OHLCV, 거래대금, CVD (BTCUSDT 무기한선물; ETHUSDT 는 4시간봉·일봉) |
 | `data/features/` | 모형 입력 변수: 로그수익률, CVD 흐름, BVC 흐름, CLV 흐름, CLV 잔차, 롤링 표준편차 등 |
 | `results/` | 표에 쓰인 결과(JSON), 실행 로그, 부트스트랩·순환 이동 검정 결과, 추정된 상태열(npz) |

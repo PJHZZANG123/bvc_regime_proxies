@@ -206,7 +206,7 @@ DESIGN_V2_TEXT = {
     "ko": dict(trades="집계 체결\n(aggTrades,\n28.1억 행)", bars="봉\n(4시간봉·일봉)",
                measures=["CVD", "BVC", "CLV 흐름", "CLV 잔차", "수익률 r 만", "봉 순번 t"],
                models=["M1 [r, CVD]\n기준 모형", "M2 [r, BVC]", "M4 [r, CLV 흐름]", "M5 [r, CLV 잔차]",
-                       "M3 [r]\n수익률 통제군", "T [r, t]\n시간 대조군"],
+                       "M3 [r]\n수익률 모형", "T [r, t]\n순번 모형"],
                match="헝가리안\n대응", kappa="전체 κ\n시기 조정 κ", delta="M3·T 대비\nΔκ",
                heads=["자료", "측정치", "은닉마르코프모형 (K: M1 기준)", "평가"], out="fig_design_v2.png"),
 }
@@ -277,7 +277,7 @@ def fig_timeline(lang="en"):
     label = ({hi: "고변동", lo: "저변동", ns: "순매도"} if ko
              else {hi: "High volatility", lo: "Low volatility", ns: "Net selling"})
     color = {hi: "tab:orange", lo: "tab:blue", ns: "tab:red"}
-    rows = ([("기준 모형 (M1)", "M1"), ("BVC (M2)", "M2"), ("수익률 통제군 (M3)", "M3"), ("시간 대조군 (T)", "T")] if ko
+    rows = ([("기준 모형 (M1)", "M1"), ("BVC (M2)", "M2"), ("수익률 모형 (M3)", "M3"), ("순번 모형 (T)", "T")] if ko
             else [("Benchmark (M1)", "M1"), ("BVC (M2)", "M2"), ("Returns control (M3)", "M3"), ("Time index (T)", "T")])
     fig, ax = plt.subplots(figsize=(8, 3.0))
     x = mdates.date2num(ts.to_pydatetime())
@@ -312,7 +312,7 @@ def fig_adjusted(lang="en", noclv=False):
     settings = [("BTC_4h_K3", f"BTC {bar[0]} K=3"), ("BTC_4h_K2", f"BTC {bar[0]} K=2"), ("BTC_1d_K2", f"BTC {bar[1]} K=2"),
                 ("ETH_4h_K3", f"ETH {bar[0]} K=3"), ("ETH_1d_K4", f"ETH {bar[1]} K=4")]
     settings = [s for s in settings if s[0] in d]
-    models = ([("M2", "BVC", "o"), ("M4", "CLV 흐름", "s"), ("M5", "CLV 잔차", "^"), ("T", "시간 대조군", "x")] if ko
+    models = ([("M2", "BVC", "o"), ("M4", "CLV 흐름", "s"), ("M5", "CLV 잔차", "^"), ("T", "순번 모형", "x")] if ko
               else [("M2", "BVC", "o"), ("M4", "CLV flow", "s"), ("M5", "CLV residual", "^"), ("T", "Time index", "x")])
     if noclv:
         models = [m for m in models if m[0] in ("M2", "T")]
@@ -329,7 +329,7 @@ def fig_adjusted(lang="en", noclv=False):
                         fmt=mk, capsize=2.5, label=name, ms=5)
         ax.axvline(0, color="black", ls="--", lw=0.8)
         ax.set_title(title, fontsize=10)
-        ax.set_xlabel("수익률 통제군 대비 Δκ (95% 구간)" if ko else "Δκ vs. returns control (95% CI)")
+        ax.set_xlabel("수익률 모형 대비 Δκ (95% 구간)" if ko else "Δκ vs. returns control (95% CI)")
     axes[0].set_yticks(ys); axes[0].set_yticklabels([s[1] for s in settings])
     handles, labels = axes[0].get_legend_handles_labels()
     # 범례는 그림 전체 위에 둔다(tight_layout 이 축 범례를 기준으로 간격을 벌리지 않게, 저장도 직접 한다)
