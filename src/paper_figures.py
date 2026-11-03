@@ -255,6 +255,77 @@ def fig_design_v2(lang="en", noclv=False):
     save(fig, tx["out"])
 
 
+# ---------------------------------------------------------------- 투고본 그림 1(2026-11-03): 비교 모형 전부를 역할별로 묶는다
+def fig_design_v3():
+    """투고본(지능정보연구) 그림 1 → fig_design_v3.png. fig_design_v2(noclv) 의 네 모형에 BVC 분해 모형(표 8)과
+    랜덤워크·백색잡음을 더해 주 비교 / BVC 분해 / 시기 구분 점검(주문흐름 정보 없음)으로 묶고, 난수는 따로 된 자료
+    상자에서 나오게 그린다. 좌표는 가로 2000·세로 1616 단위(위가 0)."""
+    W, H = 2000, 1616
+    fig = plt.figure(figsize=(8, 8 * H / W))
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(0, W); ax.set_ylim(H, 0); ax.axis("off")
+
+    def box(x0, y0, x1, y1, text, fs=9):
+        ax.add_patch(plt.Rectangle((x0, y0), x1 - x0, y1 - y0, fill=False, edgecolor="black"))
+        ax.text((x0 + x1) / 2, (y0 + y1) / 2, text, ha="center", va="center", fontsize=fs, linespacing=1.4)
+
+    def arrow(x0, y0, x1, y1):
+        ax.annotate("", xy=(x1, y1), xytext=(x0, y0), arrowprops=dict(arrowstyle="->", color="black"))
+
+    def line(xs, ys):
+        ax.plot(xs, ys, color="black", lw=0.8)
+
+    sg = r"$\hat{\sigma}$"
+    groups = [("주 비교", [("CVD", "M1 [r, CVD]\n기준 모형"), ("BVC", "M2 [r, BVC]"),
+                         ("수익률 r 만", "M3 [r]\n수익률 모형")]),
+              ("BVC 분해 (표 8)", [("거래대금 V", "M3v [r, V]"), ("부호 × 거래대금", "M2s [r, sign(r)·V]"),
+                                ("표준화 수익률 × 거래대금", f"M3z [r, V·r/{sg}]"),
+                                ("BVC 승수", f"M2m [r, 2F(r/{sg}) − 1]"),
+                                (f"롤링 표준편차 {sg}", f"M3σ [r, {sg}]\n표준편차 모형")]),
+              ("시기 구분 점검 (주문흐름 정보 없음)", [("봉 순번 t", "T [r, t]\n순번 모형"), ("랜덤워크 20개", "RW [r, 랜덤워크]"),
+                                             ("백색잡음 5개", "N [r, 백색잡음]")])]
+    BH, STEP = 90, 117                 # 상자 높이, 같은 묶음 안의 줄 간격
+    MX0, MX1, HX0, HX1 = 468, 902, 1000, 1452   # 측정치·모형 상자의 좌우
+    mids, label_y = [], 165
+    for label, rows in groups:
+        ax.text(MX0, label_y, label, ha="left", va="center", fontsize=8, color="0.35")
+        y = label_y + 45
+        for ms, md in rows:
+            box(MX0, y, MX1, y + BH, ms)
+            box(HX0, y, HX1, y + BH, md, fs=8.5)
+            m = y + BH / 2
+            arrow(MX1 + 6, m, HX0 - 10, m)
+            line([HX1, 1522], [m, m])
+            mids.append(m)
+            y += STEP
+        label_y = y - STEP + BH + 37
+
+    # 자료: 체결 기록 → 봉 → (CVD … 봉 순번), 난수 → (랜덤워크, 백색잡음)
+    box(35, 355, 330, 550, "집계 체결\n(aggTrades,\n28.1억 행)")
+    box(35, 689, 330, 867, "봉\n(4시간봉·일봉)")
+    box(35, 1388, 330, 1566, "표준정규 난수\n(자료와 무관)")
+    arrow(182, 557, 182, 680)
+    for (src_y, i0, i1) in [(778, 0, 8), (1477, 9, 10)]:
+        line([330, 410], [src_y, src_y])
+        line([410, 410], [mids[i0], mids[i1]])
+        for m in mids[i0:i1 + 1]:
+            arrow(410, m, MX0 - 8, m)
+
+    # 평가
+    line([1522, 1522], [mids[0], mids[-1]])
+    box(1590, 521, 1965, 668, "헝가리안\n대응")
+    box(1590, 815, 1965, 993, "전체 κ\n시기 조정 κ")
+    box(1590, 1139, 1965, 1301, "M3·T 대비\nΔκ")
+    arrow(1522, 594.5, 1582, 594.5)
+    arrow(1778, 675, 1778, 806)
+    arrow(1778, 1000, 1778, 1130)
+
+    for x, s in zip([182, 685, 1226, 1778], ["자료", "측정치", "은닉마르코프모형 (K: M1 기준)", "평가"]):
+        ax.text(x, 48, s, ha="center", va="center", fontsize=9)
+    fig.savefig(OUT / "fig_design_v3.png", dpi=300)
+    plt.close(fig)
+
+
 # ---------------------------------------------------------------- 논문_수정안: 국면 상태열의 시간 배치
 def fig_timeline(lang="en"):
     """기준 모형, BVC 모형, 수익률 통제군, 시간 대조군의 상태열을 날짜 축에 나란히 (BTC 4시간봉, K=3).
@@ -345,6 +416,7 @@ def main():
     fig_design("ko"); fig_design("en"); fig_multiplier(); fig_forest("ko"); fig_forest("en"); fig_regime()
     fig_design_v2(); fig_timeline(); fig_adjusted()
     fig_design_v2("ko"); fig_timeline("ko"); fig_adjusted("ko")
+    fig_design_v3()
     print("저장:", ", ".join(p.name for p in sorted(OUT.glob("fig_*.png"))))
 
 
